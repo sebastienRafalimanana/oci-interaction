@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebGazer Cursor Interaction</title>
+  <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+  <style>
+    #cursor {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .button {
+      width: 100px;
+      height: 50px;
+      background-color: lightblue;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor"></div>
+  <div class="button" id="button1" style="top: 100px; right: 100px;">Button 1</div>
+  <div class="button" id="button2" style="top: 200px; right: 200px;">Button 2</div>
+  <button class="button" style="top: 400px; right: 200px;" onclick="webgazer.showVideoPreview(true).showPredictionPoints(true).applyKalmanFilter(true)">Calibrate</button>
+
+
+ <script src="./assets/js/main.js"></script>
+</body>
+</html>
